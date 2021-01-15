@@ -43,10 +43,26 @@ Data Model
 ------------
 ![Data Model](references/conceptual_data_model.png)
 
+A star schema is used for data model as there are only a small number of tables. If analysts want to pull the data from different tables, they can use the simple `JOIN`s for a fast query processing.
+
+- The fact table is I94_fact, which contains I94 related information for each record. This table is the main table that can be used for immigration analysis and can be connected to other tables for a futher insight.
+
+- Airport_dim includes data regarding airports, which can be used to analyze the impact of elevation or build geographic maps.
+
+- Visa_dim contains the visa types and their corresponding I94 Visa Codes.
+
+- Demographics_dim links to I94 fact table stemming from demograpihcs dataset. This table contains the population profiles by city in the U.S.
+
+- Temperature_dim provides the average temperature by city, which can be used to analyze the relatinoship between the temperature and I94 records.
+
+
+Tools
+------------
+Python, Spark, SQLite, ER Diagram
 
 Database
 ------------
-SQLite is used as the output database. You can also set environment variables in `.env` and modify configurations to set other databases like AWS Redshift as target database.
+SQLite is used as the output database. You can also set environment variables in `.env` and modify configurations to use other databases like AWS Redshift as target database.
 
 
 Project Organization
