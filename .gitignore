@@ -92,3 +92,6 @@ target/
 # Pipenv file
 Pipfile.lock
 Pipfile
+
+# too large
+GlobalLandTemperaturesByCity.csv

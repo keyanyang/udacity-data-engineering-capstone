@@ -24,9 +24,13 @@ requirements:
 	$(PYTHON_INTERPRETER) -m pip install -U pip setuptools wheel
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
 
-## Make Database
-db: requirements
-	$(PYTHON_INTERPRETER) src/data/make_database.py data/raw data/processed
+## Run ETL pipeline
+etl: requirements
+	$(PYTHON_INTERPRETER) etl.py
+
+## Validate database
+validate:
+	$(PYTHON_INTERPRETER) src/validation.py
 
 ## Delete all compiled Python files
 clean:
