@@ -31,8 +31,11 @@ Jupyter Notebook
 Sample Result by Running SQL Queries in Output Database
 ------------
 - Get fact table data
+
 ![Fact Table](references/fact.png)
+
 - Get temperature dimension table data
+
 ![Dim Table](references/dim.png)
 
 
