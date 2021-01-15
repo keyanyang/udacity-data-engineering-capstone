@@ -43,7 +43,7 @@ Data Model
 ------------
 ![Data Model](references/conceptual_data_model.png)
 
-A star schema is used for data model as there are only a small number of tables. If analysts want to pull the data from different tables, they can use the simple `JOIN`s for a fast query processing.
+A star schema is used for data model as there are only a small number of tables. If analysts want to pull the data from different tables, they can use the simple `JOIN`s for fast query processing.
 
 - The fact table is I94_fact, which contains I94 related information for each record. This table is the main table that can be used for immigration analysis and can be connected to other tables for a futher insight.
 
